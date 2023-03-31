@@ -48,7 +48,7 @@ function likedPost(qwitId: number, likesArray: number[]) {
     const doseUserLikePost = likesArray.includes(userId.value || 0)
     const likes = doseUserLikePost ? deleteLike() : addLike()
 
-    axios.patch(`http://localhost:3000/qwits/${qwitId}`, {
+    axios.patch(`http://smiling-tangible-ambert.glitch.me/qwits/${qwitId}`, {
         likes: likes
     }).then(res => {
         loadOrReload()
@@ -62,7 +62,7 @@ function deletePost(qwitId: number) {
         loading: true,
         qwitId: qwitId
     }
-    axios.delete(`http://localhost:3000/qwits/${qwitId}`)
+    axios.delete(`http://smiling-tangible-ambert.glitch.me/qwits/${qwitId}`)
         .then(res => {
             loadOrReload()
             deleteQwitLoading.value = {
