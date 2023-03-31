@@ -1,0 +1,111 @@
+{
+  "users": [
+    {
+      "email": "mr.akam.320@gmail.com",
+      "password": "$2a$10$Glc49tPM2zzd7.vcu.5ZxOVcHaIis6.5r7ou43FbimPl04.LVc6je",
+      "userName": "@kam",
+      "id": 1
+    },
+    {
+      "email": "abobakr@gmail.com",
+      "password": "$2a$10$fA1MlVCavmcvFqFv/S8BIOAzYsayS8FgNudD3OHvgwQ1xYL1WJXPK",
+      "userName": "abobakr ",
+      "id": 2
+    },
+    {
+      "email": "matin@gmail.com",
+      "password": "$2a$10$BHgylxl53.MvhkDzFZswV.mXUN0X8hOq3.n3WvfAmT2kxWjaUv6Dm",
+      "userName": "matin",
+      "id": 3
+    },
+    {
+      "email": "hello@gmail.com",
+      "password": "$2a$10$SAd6yhC.A2ZQPHXFpVYETeKOggfnQtEaJJvf/KJsi0bqNuNr6nK.G",
+      "userName": "hello",
+      "id": 4
+    }
+  ],
+  "qwits": [
+    {
+      "idPerson": 3,
+      "userNamePerson": "matin",
+      "emailPerson": "matin@gmail.com",
+      "text": "dsadas",
+      "postTime": 1679917321872,
+      "likes": [],
+      "id": 2
+    },
+    {
+      "idPerson": 3,
+      "userNamePerson": "matin",
+      "emailPerson": "matin@gmail.com",
+      "text": "dsada",
+      "postTime": 1679917325571,
+      "likes": [],
+      "id": 3
+    },
+    {
+      "idPerson": 3,
+      "userNamePerson": "matin",
+      "emailPerson": "matin@gmail.com",
+      "text": "dsada",
+      "postTime": 1679917326765,
+      "likes": [],
+      "id": 4
+    },
+    {
+      "idPerson": 3,
+      "userNamePerson": "matin",
+      "emailPerson": "matin@gmail.com",
+      "text": "dsa",
+      "postTime": 1679917327707,
+      "likes": [],
+      "id": 5
+    },
+    {
+      "idPerson": 3,
+      "userNamePerson": "matin",
+      "emailPerson": "matin@gmail.com",
+      "text": "sssssss",
+      "postTime": 1679917329366,
+      "likes": [],
+      "id": 6
+    },
+    {
+      "idPerson": 3,
+      "userNamePerson": "matin",
+      "emailPerson": "matin@gmail.com",
+      "text": "dsadasdas",
+      "postTime": 1679917330914,
+      "likes": [],
+      "id": 7
+    },
+    {
+      "idPerson": 3,
+      "userNamePerson": "matin",
+      "emailPerson": "matin@gmail.com",
+      "text": "sdadasd",
+      "postTime": 1679917332279,
+      "likes": [],
+      "id": 8
+    },
+    {
+      "idPerson": 3,
+      "userNamePerson": "matin",
+      "emailPerson": "matin@gmail.com",
+      "text": "fdfsdfsd",
+      "postTime": 1679953099573,
+      "likes": [],
+      "id": 9
+    },
+    {
+      "idPerson": 3,
+      "userNamePerson": "matin",
+      "emailPerson": "matin@gmail.com",
+      "text": "fdsfsdf",
+      "postTime": 1679953105630,
+      "likes": [],
+      "id": 10
+    }
+  ]
+}
