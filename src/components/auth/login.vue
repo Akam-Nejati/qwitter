@@ -31,7 +31,7 @@ function login() {
     if (email.value && password.value) {
         loading.value = true
         axios
-            .post("http://smiling-tangible-ambert.glitch.me/login", {
+            .post("https://smiling-tangible-ambert.glitch.me/login", {
                 email: email.value,
                 password: password.value,
             })

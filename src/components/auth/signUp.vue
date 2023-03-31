@@ -38,7 +38,7 @@ function createUser() {
     if (email.value && userName.value && password.value) {
         loading.value = true
         axios
-            .post("http://smiling-tangible-ambert.glitch.me/users", {
+            .post("https://smiling-tangible-ambert.glitch.me/users", {
                 userName: userName.value,
                 email: email.value,
                 password: password.value,

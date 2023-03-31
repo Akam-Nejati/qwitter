@@ -10,7 +10,7 @@ export const useGetQwits = defineStore("getQwits", () => {
     loading.value = true;
 
     axios
-      .get("http://smiling-tangible-ambert.glitch.me/qwits")
+      .get("https://smiling-tangible-ambert.glitch.me/qwits")
       .then((res) => {
         qwits.value = res.data;
         loading.value = false;

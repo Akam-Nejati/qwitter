@@ -11,7 +11,7 @@ export const useUserInfo = defineStore("getUserInfo", () => {
 
   function getUser() {
     axios
-      .get(`http://smiling-tangible-ambert.glitch.me/users/${id.value}`)
+      .get(`https://smiling-tangible-ambert.glitch.me/users/${id.value}`)
       .then((res) => {
         user.value = res.data;
       })

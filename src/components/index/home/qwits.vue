@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { formatDistance  } from 'date-fns';
+import { formatDistance } from 'date-fns';
 import axios from 'axios';
 import { computed, onMounted, ref, toRefs } from 'vue';
 import { DeleteQwitLoading } from "../../../types/deleteQwitLoading.interface"
@@ -48,7 +48,7 @@ function likedPost(qwitId: number, likesArray: number[]) {
     const doseUserLikePost = likesArray.includes(userId.value || 0)
     const likes = doseUserLikePost ? deleteLike() : addLike()
 
-    axios.patch(`http://smiling-tangible-ambert.glitch.me/qwits/${qwitId}`, {
+    axios.patch(`https://smiling-tangible-ambert.glitch.me/qwits/${qwitId}`, {
         likes: likes
     }).then(res => {
         loadOrReload()
@@ -62,7 +62,7 @@ function deletePost(qwitId: number) {
         loading: true,
         qwitId: qwitId
     }
-    axios.delete(`http://smiling-tangible-ambert.glitch.me/qwits/${qwitId}`)
+    axios.delete(`https://smiling-tangible-ambert.glitch.me/qwits/${qwitId}`)
         .then(res => {
             loadOrReload()
             deleteQwitLoading.value = {

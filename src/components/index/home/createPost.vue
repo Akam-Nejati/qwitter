@@ -24,7 +24,7 @@ const { name } = useDisplay()
 async function postQwit(event: any) {
     if (text.value) {
         loading.value = true
-        axios.post("http://smiling-tangible-ambert.glitch.me/qwits", {
+        axios.post("https://smiling-tangible-ambert.glitch.me/qwits", {
             idPerson: user.value?.id,
             userNamePerson: user.value?.userName,
             emailPerson: user.value?.email,
