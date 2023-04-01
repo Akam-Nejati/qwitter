@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import Qwits from './qwits.vue';
 import CreatePost from './createPost.vue';
-console.log("sdasda");
-
 </script>
 
 <template>

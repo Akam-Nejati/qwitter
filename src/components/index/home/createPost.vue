@@ -15,11 +15,13 @@ const { createPostDrawer } = toRefs(DrawersStore)
 const qwitsStore = useGetQwits()
 const { getQwits } = toRefs(qwitsStore)
 const userStore = useUserInfo()
-const { user } = toRefs(userStore)
+const { user, getUser } = toRefs(userStore)
 const text = ref<string>()
 const photo = ref<any>(null)
 const loading = ref<boolean>()
 const { name } = useDisplay()
+
+getUser.value()
 
 async function postQwit(event: any) {
     if (text.value) {

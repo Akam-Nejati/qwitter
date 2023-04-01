@@ -7,9 +7,10 @@ export const useUserInfo = defineStore("getUserInfo", () => {
   const id = ref();
   const user = ref<User>();
 
-  id.value = JSON.parse(localStorage.getItem("id") || "0");
-
+  
   function getUser() {
+    id.value = JSON.parse(localStorage.getItem("id") || "0");
+
     axios
       .get(`https://smiling-tangible-ambert.glitch.me/users/${id.value}`)
       .then((res) => {
@@ -19,9 +20,9 @@ export const useUserInfo = defineStore("getUserInfo", () => {
         console.log(error);
       });
   }
-  getUser();
 
   return {
+    getUser,
     user,
   };
 });

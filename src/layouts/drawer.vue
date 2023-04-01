@@ -10,7 +10,7 @@ import AccountSkeleton from "@/components/skeleton/accountSkeleton.vue";
 const DrawersStore = useDrawers()
 const { menuDrawer } = toRefs(DrawersStore)
 const userStore = useUserInfo()
-const { user } = toRefs(userStore)
+const { user, getUser } = toRefs(userStore)
 const selected_item = ref<string>("home");
 const { name } = useDisplay()
 const router = useRouter()
@@ -30,6 +30,8 @@ const list = ref<List[]>([
         active: false,
     },
 ]);
+
+getUser.value()
 
 function logOut() {
     localStorage.removeItem("id")
