@@ -6,12 +6,17 @@ import { DeleteQwitLoading } from "../../../types/deleteQwitLoading.interface"
 import { useGetQwits } from '@/stors/useGetQwits';
 import { useDrawers } from '@/stors/useDrawers';
 import QwitsSkeleton from '@/components/skeleton/qwitsSkeleton.vue';
+import { LikeQwitLoading } from '@/types/likeQwitLoading.interface';
 
 const DrawersStore = useDrawers()
 const { createPostDrawer, menuDrawer } = toRefs(DrawersStore)
 const qwitsStore = useGetQwits()
 const { getQwits, qwits, loading: getQwitLoading } = toRefs(qwitsStore)
 const deleteQwitLoading = ref<DeleteQwitLoading>({
+    loading: false,
+    qwitId: null
+})
+const likeQwitLoading = ref<LikeQwitLoading>({
     loading: false,
     qwitId: null
 })
@@ -37,6 +42,11 @@ function showPhoto(qwit: any) {
 
 
 function likedPost(qwitId: number, likesArray: number[]) {
+    likeQwitLoading.value = {
+        loading: true,
+        qwitId: qwitId
+    }
+
     function addLike(): number[] {
         likesArray.push(userId.value || 0)
         return likesArray
@@ -52,8 +62,16 @@ function likedPost(qwitId: number, likesArray: number[]) {
         likes: likes
     }).then(res => {
         loadOrReload()
+        likeQwitLoading.value = {
+            loading: false,
+            qwitId: null
+        }
     }).catch(error => {
         console.log(error);
+        likeQwitLoading.value = {
+            loading: false,
+            qwitId: null
+        }
     })
 }
 
@@ -120,9 +138,13 @@ function deletePost(qwitId: number) {
                         class="bg-white rounded-lg photo" width="100%" aspect-ratio="16/9" :src="qwit.photo"></v-img>
                 </div>
                 <div class="mt-4 d-flex">
-                    <div>
-                        <v-icon @click="likedPost(qwit.id, qwit.likes)" icon="mdi-heart" class="like"
-                            :class="{ 'text-red-darken-1': qwit.likes.includes(userId) }"></v-icon>
+                    <div  class="d-flex">
+                        <div>
+                            <v-progress-circular indeterminate model-value="20" :size="20" class="mr-2"
+                                v-if="likeQwitLoading.loading && qwit.id === likeQwitLoading.qwitId"></v-progress-circular>
+                            <v-icon v-else @click="likedPost(qwit.id, qwit.likes)" icon="mdi-heart" class="like"
+                                :class="{ 'text-red-darken-1': qwit.likes.includes(userId) }"></v-icon>
+                        </div>
                         <span class="ml-2"> {{ qwit.likes.length }} </span>
                     </div>
                     <div class="ml-4" v-if="qwit.idPerson === userId">
