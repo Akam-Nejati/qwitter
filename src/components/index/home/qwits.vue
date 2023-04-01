@@ -138,7 +138,7 @@ function deletePost(qwitId: number) {
                         class="bg-white rounded-lg photo" width="100%" aspect-ratio="16/9" :src="qwit.photo"></v-img>
                 </div>
                 <div class="mt-4 d-flex">
-                    <div  class="d-flex">
+                    <div class="d-flex">
                         <div>
                             <v-progress-circular indeterminate model-value="20" :size="20" class="mr-2"
                                 v-if="likeQwitLoading.loading && qwit.id === likeQwitLoading.qwitId"></v-progress-circular>

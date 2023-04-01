@@ -17,7 +17,7 @@ const { getQwits } = toRefs(qwitsStore)
 const userStore = useUserInfo()
 const { user } = toRefs(userStore)
 const text = ref<string>()
-const photo = ref<any>(() => null)
+const photo = ref<any>(null)
 const loading = ref<boolean>()
 const { name } = useDisplay()
 
