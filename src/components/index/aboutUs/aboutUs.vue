@@ -25,7 +25,7 @@ const { menuDrawer } = toRefs(DrawersStore)
                 <div class="mt-10 d-flex flex-column justify-space-between">
                     <span class="title mr-6">Project repository in github 📑:</span>
                     <div class=" mt-6">
-                        <a class="link text-indigo-lighten-3" href="">../../assets/img/telegram.svg </a>
+                        <a class="link text-indigo-lighten-3" href="https://github.com/Akam-Nejati/qwitter"> https://github.com/Akam-Nejati/qwitter </a>
                     </div>
                 </div>
                 <div class="mt-10 d-flex flex-column justify-space-between">

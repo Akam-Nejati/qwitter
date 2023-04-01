@@ -13,6 +13,3 @@
   background-color: #121212;
 }
 </style>
-
-
-<!-- https://smiling-tangible-ambert.glitch.me -->
