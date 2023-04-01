@@ -59,20 +59,26 @@ function createUser() {
 
 <template>
     <v-window-item :value="2">
-        <v-alert class="mb-4" v-show="errorMassage || data" :type="errorMassage ? 'error' : 'success'"
-            :title="errorMassage ? 'Signup failed' : 'Signup success'" :text="errorMassage ? errorMassage : ''"></v-alert>
         <v-sheet class="mx-auto">
             <v-form class="form d-flex justify-space-between flex-column" @submit.prevent="createUser()">
                 <div>
-                    <v-text-field v-model="userName" label="User name *" :rules="userNameRules" required type="text"
-                        color="indigo-lighten-3"></v-text-field>
+                    <div>
+                        <v-alert class="mb-4" v-show="errorMassage || data" :type="errorMassage ? 'error' : 'success'"
+                            :title="errorMassage ? 'Signup failed' : 'Signup success'"
+                            :text="errorMassage ? errorMassage : ''"></v-alert>
+                    </div>
+                    <div>
+                        <v-text-field v-model="userName" label="User name *" :rules="userNameRules" required type="text"
+                            color="indigo-lighten-3"></v-text-field>
 
-                    <v-text-field v-model="email" label="Email *" :rules="emailRules" required type="email"
-                        color="indigo-lighten-3"></v-text-field>
+                        <v-text-field v-model="email" label="Email *" :rules="emailRules" required type="email"
+                            color="indigo-lighten-3"></v-text-field>
 
-                    <v-text-field v-model="password" label="Password" :rules="passwordRules" required clearable
-                        type="password" color="indigo-lighten-3"></v-text-field>
+                        <v-text-field v-model="password" label="Password" :rules="passwordRules" required clearable
+                            type="password" color="indigo-lighten-3"></v-text-field>
+                    </div>
                 </div>
+
 
                 <v-btn type="submit" color="indigo-lighten-1" class="align-self-start" :disabled="loading">
                     <v-progress-circular indeterminate model-value="20" :size="20" class="mr-2"
